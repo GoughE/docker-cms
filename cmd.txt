@@ -1,0 +1,17 @@
+//making a swarm
+//in manager
+docker swarm init
+
+//in workers
+sudo docker swarm join --token .....
+
+//view swarm
+docker node ls
+
+//install flask for compiling with python3
+sudo apt-get -y install python3-pip
+pip3 install flask
+
+//Running the service Nginx
+
+docker service create --detach=true --replicas 10 -p 80:80 --name web nginx
